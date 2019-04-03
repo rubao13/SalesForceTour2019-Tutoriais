@@ -1,0 +1,229 @@
+!SESSION 2019-03-23 11:39:16.186 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.mule.tooling.core 1 0 2019-03-23 11:41:33.585
+!MESSAGE Configuring M2_REPO variable with value: /home/rubens/.m2/repository
+
+!ENTRY org.mule.tooling.core 1 0 2019-03-23 11:41:33.597
+!MESSAGE Configuring M2_REPO variable with value: /home/rubens/.m2/repository
+
+!ENTRY org.eclipse.ui 4 4 2019-03-23 11:41:37.408
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ContentOutline.
+
+!ENTRY org.eclipse.ui 4 4 2019-03-23 11:41:37.408
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ContentOutline.
+
+!ENTRY org.mule.tooling.core 1 0 2019-03-23 11:42:03.870
+!MESSAGE Generating unique Studio Id = STUDIO-5fcaa86b-aa80-4190-96f5-93107121ec81-15533521238690273
+
+!ENTRY org.mule.tooling.core 1 0 2019-03-23 11:42:03.870
+!MESSAGE Generating unique Studio Id = STUDIO-5fcaa86b-aa80-4190-96f5-93107121ec81-15533521238690273
+
+!ENTRY org.eclipse.jface 2 0 2019-03-23 12:06:58.947
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-23 12:06:58.948
+!MESSAGE A conflict occurred for CTRL+F:
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findReplace,Find and Replace,
+		Find and replace text,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47f71f50,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.searchCommand,Find/Replace,
+		Find/Replace,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@994d48d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.commands.focusSearchCommand,Focus Search Command,
+		Focus Search in Palette,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78c3b3ec,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.core 1 0 2019-03-23 14:39:34.807
+!MESSAGE While generating classpath found that /opt/AnypointStudio65/plugins/org.mule.tooling.server.3.9.1.ee_6.4.2.201804231909/mule/lib/endorsed/ is not a directory.
+
+!ENTRY org.mule.tooling.core 1 0 2019-03-23 14:39:34.808
+!MESSAGE While generating classpath found that /opt/AnypointStudio65/plugins/org.mule.tooling.server.3.9.1.ee_6.4.2.201804231909/mule/lib/endorsed/ is not a directory.
+
+!ENTRY org.mule.tooling.core 2 0 2019-03-23 14:39:35.314
+!MESSAGE Authenticator was changed to class org.mule.tooling.utils.networking.ProxyAuthenticator. Restoring default authenticator to null
+
+!ENTRY org.mule.tooling.core 2 0 2019-03-23 14:39:35.314
+!MESSAGE Authenticator was changed to class org.mule.tooling.utils.networking.ProxyAuthenticator. Restoring default authenticator to null
+
+!ENTRY org.eclipse.jdt.launching 4 124 2019-03-23 14:44:52.901
+!MESSAGE Launch configuration usando-api-terceiros references closed project usando-api-terceiros
+
+!ENTRY org.eclipse.jdt.launching 4 124 2019-03-23 14:44:52.902
+!MESSAGE Launch configuration usando-api-terceiros references closed project usando-api-terceiros
+
+!ENTRY org.eclipse.jdt.launching 4 124 2019-03-23 14:44:52.902
+!MESSAGE Launch configuration usando-api-terceiros references closed project usando-api-terceiros
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-23 14:51:55.227
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-03-27 23:10:01.014 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-27 23:11:27.750
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2019-03-27 23:27:34.595
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-03-27 23:27:34.595
+!MESSAGE A conflict occurred for CTRL+F:
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findReplace,Find and Replace,
+		Find and replace text,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3ff4ed56,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.searchCommand,Find/Replace,
+		Find/Replace,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@475f141a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.commands.focusSearchCommand,Focus Search Command,
+		Focus Search in Palette,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15516e5a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.core 1 0 2019-03-28 00:19:49.087
+!MESSAGE While generating classpath found that /opt/AnypointStudio65/plugins/org.mule.tooling.server.3.9.1.ee_6.4.2.201804231909/mule/lib/endorsed/ is not a directory.
+
+!ENTRY org.mule.tooling.core 1 0 2019-03-28 00:19:49.087
+!MESSAGE While generating classpath found that /opt/AnypointStudio65/plugins/org.mule.tooling.server.3.9.1.ee_6.4.2.201804231909/mule/lib/endorsed/ is not a directory.
+
+!ENTRY org.mule.tooling.core 2 0 2019-03-28 00:20:00.495
+!MESSAGE Authenticator was changed to class org.mule.tooling.utils.networking.ProxyAuthenticator. Restoring default authenticator to null
+
+!ENTRY org.mule.tooling.core 2 0 2019-03-28 00:20:00.495
+!MESSAGE Authenticator was changed to class org.mule.tooling.utils.networking.ProxyAuthenticator. Restoring default authenticator to null
+
+!ENTRY org.eclipse.jdt.launching 4 124 2019-03-28 00:33:27.831
+!MESSAGE Launch configuration ler-arquivo-dados references closed project ler-arquivo-dados
+
+!ENTRY org.eclipse.jdt.launching 4 124 2019-03-28 00:33:27.832
+!MESSAGE Launch configuration ler-arquivo-dados references closed project ler-arquivo-dados
+
+!ENTRY org.eclipse.jdt.launching 4 124 2019-03-28 00:33:27.832
+!MESSAGE Launch configuration ler-arquivo-dados references closed project ler-arquivo-dados
+!SESSION 2019-04-02 23:17:46.144 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2019-04-02 23:28:43.184
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-04-02 23:28:43.185
+!MESSAGE A conflict occurred for CTRL+F:
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findReplace,Find and Replace,
+		Find and replace text,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4ad23216,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.searchCommand,Find/Replace,
+		Find/Replace,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4caca1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.commands.focusSearchCommand,Focus Search Command,
+		Focus Search in Palette,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6071132e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.core 4 0 2019-04-02 23:47:38.777
+!MESSAGE There was an unexpected exception running job: Validating acesso-sap.xml
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.core.MuleCorePlugin.getLog(MuleCorePlugin.java:311)
+	at org.mule.tooling.core.MuleCorePlugin.logError(MuleCorePlugin.java:240)
+	at org.mule.tooling.core.classloader.ProjectClasspathUtils.findMatchesInClasspath(ProjectClasspathUtils.java:527)
+	at org.mule.tooling.core.classloader.ProjectClasspathUtils.getJarInsideClassPath(ProjectClasspathUtils.java:162)
+	at org.mule.tooling.core.requirement.RequirementValidator$ValidateJarByFileName.run(RequirementValidator.java:218)
+	at org.mule.tooling.core.requirement.RequirementValidator.runValidation(RequirementValidator.java:121)
+	at org.mule.tooling.core.requirement.RequirementValidator.visitRequiredJar(RequirementValidator.java:99)
+	at org.mule.tooling.model.module.RequiredJar.accept(RequiredJar.java:39)
+	at org.mule.tooling.core.requirement.RequirementValidator.validate(RequirementValidator.java:78)
+	at org.mule.tooling.ui.modules.core.widgets.DefinitionElement.validateChildren(DefinitionElement.java:408)
+	at com.onpositive.commons.namespace.ide.ui.editors.xml.model.DomainValidatorVisitor.enterNode(DomainValidatorVisitor.java:113)
+	at com.onpositive.commons.namespace.ide.ui.editors.xml.model.DomainEditingModelObject.traverse(DomainEditingModelObject.java:92)
+	at com.onpositive.commons.namespace.ide.ui.editors.xml.model.DomainEditingModelObject.traverse(DomainEditingModelObject.java:97)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.doValidate(MuleConfigurationValidator.java:177)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.collectErrorMessages(MuleConfigurationValidator.java:166)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:134)
+	at org.mule.tooling.core.builder.TransformerUtils.getMuleConfigurationErrorsFromSource(TransformerUtils.java:176)
+	at org.mule.tooling.messageflow.editor.MultiPageMessageFlowEditor.doValidate(MultiPageMessageFlowEditor.java:1338)
+	at org.mule.tooling.messageflow.editor.MultiPageMessageFlowEditor$ValidateFromEditorJob.doRun(MultiPageMessageFlowEditor.java:1610)
+	at org.mule.tooling.core.utils.StudioDesignContextJob$1.call(StudioDesignContextJob.java:29)
+	at org.mule.tooling.core.utils.StudioDesignContextJob$1.call(StudioDesignContextJob.java:1)
+	at org.mule.tooling.core.StudioDesignContextRunner.runWithMuleProject(StudioDesignContextRunner.java:69)
+	at org.mule.tooling.core.utils.StudioDesignContextJob.run(StudioDesignContextJob.java:25)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.mule.tooling.core 4 0 2019-04-02 23:47:38.780
+!MESSAGE There was an unexpected exception running job: Validating acesso-sap.xml
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.core.MuleCorePlugin.getLog(MuleCorePlugin.java:311)
+	at org.mule.tooling.core.MuleCorePlugin.logError(MuleCorePlugin.java:240)
+	at org.mule.tooling.core.classloader.ProjectClasspathUtils.findMatchesInClasspath(ProjectClasspathUtils.java:527)
+	at org.mule.tooling.core.classloader.ProjectClasspathUtils.getJarInsideClassPath(ProjectClasspathUtils.java:162)
+	at org.mule.tooling.core.requirement.RequirementValidator$ValidateJarByFileName.run(RequirementValidator.java:218)
+	at org.mule.tooling.core.requirement.RequirementValidator.runValidation(RequirementValidator.java:121)
+	at org.mule.tooling.core.requirement.RequirementValidator.visitRequiredJar(RequirementValidator.java:99)
+	at org.mule.tooling.model.module.RequiredJar.accept(RequiredJar.java:39)
+	at org.mule.tooling.core.requirement.RequirementValidator.validate(RequirementValidator.java:78)
+	at org.mule.tooling.ui.modules.core.widgets.DefinitionElement.validateChildren(DefinitionElement.java:408)
+	at com.onpositive.commons.namespace.ide.ui.editors.xml.model.DomainValidatorVisitor.enterNode(DomainValidatorVisitor.java:113)
+	at com.onpositive.commons.namespace.ide.ui.editors.xml.model.DomainEditingModelObject.traverse(DomainEditingModelObject.java:92)
+	at com.onpositive.commons.namespace.ide.ui.editors.xml.model.DomainEditingModelObject.traverse(DomainEditingModelObject.java:97)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.doValidate(MuleConfigurationValidator.java:177)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.collectErrorMessages(MuleConfigurationValidator.java:166)
+	at org.mule.tooling.ui.modules.core.validation.MuleConfigurationValidator.validate(MuleConfigurationValidator.java:134)
+	at org.mule.tooling.core.builder.TransformerUtils.getMuleConfigurationErrorsFromSource(TransformerUtils.java:176)
+	at org.mule.tooling.messageflow.editor.MultiPageMessageFlowEditor.doValidate(MultiPageMessageFlowEditor.java:1338)
+	at org.mule.tooling.messageflow.editor.MultiPageMessageFlowEditor$ValidateFromEditorJob.doRun(MultiPageMessageFlowEditor.java:1610)
+	at org.mule.tooling.core.utils.StudioDesignContextJob$1.call(StudioDesignContextJob.java:29)
+	at org.mule.tooling.core.utils.StudioDesignContextJob$1.call(StudioDesignContextJob.java:1)
+	at org.mule.tooling.core.StudioDesignContextRunner.runWithMuleProject(StudioDesignContextRunner.java:69)
+	at org.mule.tooling.core.utils.StudioDesignContextJob.run(StudioDesignContextJob.java:25)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)

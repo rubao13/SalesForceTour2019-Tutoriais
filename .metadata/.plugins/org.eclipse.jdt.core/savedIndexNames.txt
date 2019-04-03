@@ -1,0 +1,5 @@
+INDEX VERSION 1.130+/home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.metadata/.plugins/org.eclipse.jdt.core
+2540607589.index
+1623420913.index
+3765020915.index
+3172634662.index

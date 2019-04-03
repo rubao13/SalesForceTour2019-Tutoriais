@@ -1,0 +1,163 @@
+2019-03-23 14:45:17,084 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'ler-arquivo-dados'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-03-23 14:45:17,328 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-03-23 14:45:17,529 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-03-23 14:45:17,754 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-03-23 14:45:17,755 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-03-23 14:45:18,184 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3ec11999: startup date [Sat Mar 23 14:45:17 BRT 2019]; root of context hierarchy
+2019-03-23 14:45:20,713 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-23 14:45:22,655 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2019-03-23 14:45:22,986 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/ler-arquivo-dados/queue-tx-log/tx1.log and /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/ler-arquivo-dados/queue-tx-log/tx2.log
+2019-03-23 14:45:23,027 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/ler-arquivo-dados/queue-xa-tx-log/tx1.log and /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/ler-arquivo-dados/queue-xa-tx-log/tx2.log
+2019-03-23 14:45:23,052 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2019-03-23 14:45:23,440 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-03-23 14:45:23,448 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: ler-arquivo-dadosFlow
+2019-03-23 14:45:23,448 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7930ffa9
+2019-03-23 14:45:23,498 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: ler-arquivo-dadosFlow.stage1
+2019-03-23 14:45:24,416 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/apps/ler-arquivo-dados/ler-arquivo-dados.xml'}]"
+2019-03-23 14:45:24,416 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/apps/ler-arquivo-dados/ler-arquivo-dados.xml'}]"
+2019-03-23 14:45:24,420 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2019-03-23 14:45:24,421 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'ler-arquivo-dados'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-03-23 14:45:24,425 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-03-23 14:45:24,425 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-03-23 14:45:24,449 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=403c3a01
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2019-03-23 14:45:24,449 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=403c3a01
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2019-03-23 14:45:24,450 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2019-03-23 14:45:24,460 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-03-23 14:45:24,463 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-03-23 14:45:24,467 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: ler-arquivo-dadosFlow
+2019-03-23 14:45:24,468 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: ler-arquivo-dadosFlow.stage1
+2019-03-23 14:45:24,540 [main] INFO  org.mule.transport.file.FileConnector - Registering listener: ler-arquivo-dadosFlow on endpointUri: file:///home/rubens/Documents/entrada
+2019-03-23 14:45:24,600 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: FileMessageReceiver
+2019-03-23 14:45:24,608 [main] INFO  org.mule.transport.file.FileMessageReceiver - Connecting clusterizable message receiver
+2019-03-23 14:45:24,609 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: FileMessageReceiver
+2019-03-23 14:45:24,609 [main] INFO  org.mule.transport.file.FileMessageReceiver - Starting clusterizable message receiver
+2019-03-23 14:45:24,624 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-03-23 14:45:24,659 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.ler-arquivo-dados:type=Endpoint,service="ler-arquivo-dadosFlow",connector=connector.file.mule.default,name="endpoint.file.home.rubens.Documents.entrada"
+2019-03-23 14:45:24,659 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.ler-arquivo-dados:type=Endpoint,service="ler-arquivo-dadosFlow",connector=connector.file.mule.default,name="endpoint.file.home.rubens.Documents.entrada"
+2019-03-23 14:45:24,663 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.ler-arquivo-dados:type=Connector,name="connector.file.mule.default"
+2019-03-23 14:45:24,668 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: ler-arquivo-dados                                     *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2019-03-23 14:45:40,764 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'ler-arquivo-dados'                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-03-23 14:45:41,075 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-03-23 14:45:41,287 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-03-23 14:45:41,520 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-03-23 14:45:41,521 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-03-23 14:45:41,915 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3ec11999: startup date [Sat Mar 23 14:45:41 BRT 2019]; root of context hierarchy
+2019-03-23 14:45:44,503 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-23 14:45:46,368 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2019-03-23 14:45:46,645 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/ler-arquivo-dados/queue-tx-log/tx1.log and /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/ler-arquivo-dados/queue-tx-log/tx2.log
+2019-03-23 14:45:46,678 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/ler-arquivo-dados/queue-xa-tx-log/tx1.log and /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/ler-arquivo-dados/queue-xa-tx-log/tx2.log
+2019-03-23 14:45:46,689 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2019-03-23 14:45:47,003 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-03-23 14:45:47,012 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: ler-arquivo-dadosFlow
+2019-03-23 14:45:47,012 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@41b13f3d
+2019-03-23 14:45:47,080 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: ler-arquivo-dadosFlow.stage1
+2019-03-23 14:45:47,934 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/apps/ler-arquivo-dados/ler-arquivo-dados.xml'}]"
+2019-03-23 14:45:47,934 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/apps/ler-arquivo-dados/ler-arquivo-dados.xml'}]"
+2019-03-23 14:45:47,938 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2019-03-23 14:45:47,939 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'ler-arquivo-dados'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-03-23 14:45:47,944 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-03-23 14:45:47,944 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-03-23 14:45:47,968 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=1b5a1d85
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2019-03-23 14:45:47,969 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=1b5a1d85
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2019-03-23 14:45:47,970 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2019-03-23 14:45:47,982 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-03-23 14:45:47,984 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-03-23 14:45:47,988 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: ler-arquivo-dadosFlow
+2019-03-23 14:45:47,989 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: ler-arquivo-dadosFlow.stage1
+2019-03-23 14:45:48,076 [main] INFO  org.mule.transport.file.FileConnector - Registering listener: ler-arquivo-dadosFlow on endpointUri: file:///home/rubens/Documents/entrada
+2019-03-23 14:45:48,131 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: FileMessageReceiver
+2019-03-23 14:45:48,142 [main] INFO  org.mule.transport.file.FileMessageReceiver - Connecting clusterizable message receiver
+2019-03-23 14:45:48,143 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: FileMessageReceiver
+2019-03-23 14:45:48,143 [main] INFO  org.mule.transport.file.FileMessageReceiver - Starting clusterizable message receiver
+2019-03-23 14:45:48,156 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-03-23 14:45:48,187 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.ler-arquivo-dados:type=Endpoint,service="ler-arquivo-dadosFlow",connector=connector.file.mule.default,name="endpoint.file.home.rubens.Documents.entrada"
+2019-03-23 14:45:48,188 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.ler-arquivo-dados:type=Endpoint,service="ler-arquivo-dadosFlow",connector=connector.file.mule.default,name="endpoint.file.home.rubens.Documents.entrada"
+2019-03-23 14:45:48,190 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.ler-arquivo-dados:type=Connector,name="connector.file.mule.default"
+2019-03-23 14:45:48,199 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: ler-arquivo-dados                                     *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2019-03-23 14:48:14,196 [[ler-arquivo-dados].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/rubens/Documents/entrada/teste.txt
+2019-03-23 14:48:14,277 [[ler-arquivo-dados].ler-arquivo-dadosFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - inicio fluxo ler arquivo dados
+2019-03-23 14:48:14,302 [[ler-arquivo-dados].ler-arquivo-dadosFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - conteudo arq: BOOOMMMMM

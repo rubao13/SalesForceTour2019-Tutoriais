@@ -1,0 +1,53 @@
+2019-03-23 12:44:10,303 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'usando-api-terceiros'                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-03-23 12:44:10,563 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-03-23 12:44:10,761 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-03-23 12:44:10,964 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-03-23 12:44:10,964 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-03-23 12:44:11,347 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3ec11999: startup date [Sat Mar 23 12:44:11 BRT 2019]; root of context hierarchy
+2019-03-23 12:44:14,039 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-23 12:44:15,770 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2019-03-23 12:44:16,359 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/usando-api-terceiros/queue-tx-log/tx1.log and /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/usando-api-terceiros/queue-tx-log/tx2.log
+2019-03-23 12:44:16,404 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/usando-api-terceiros/queue-xa-tx-log/tx1.log and /home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/./.mule/usando-api-terceiros/queue-xa-tx-log/tx2.log
+2019-03-23 12:44:16,658 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-03-23 12:44:16,668 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: usando-api-terceirosFlow
+2019-03-23 12:44:16,668 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7d97e06c
+2019-03-23 12:44:16,750 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: usando-api-terceirosFlow.stage1
+2019-03-23 12:44:17,460 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/apps/usando-api-terceiros/usando-api-terceiros.xml'}]"
+2019-03-23 12:44:17,461 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/rubens/Documents/SalesforceTour2019/Guia-1-API-Terceiros/.mule/apps/usando-api-terceiros/usando-api-terceiros.xml'}]"
+2019-03-23 12:44:17,472 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2019-03-23 12:44:17,473 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'usando-api-terceiros'                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-03-23 12:44:17,476 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-03-23 12:44:17,476 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-03-23 12:44:17,581 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2019-03-23 12:44:17,588 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-03-23 12:44:17,590 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-03-23 12:44:17,594 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: usando-api-terceirosFlow
+2019-03-23 12:44:17,595 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: usando-api-terceirosFlow.stage1
+2019-03-23 12:44:18,158 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-03-23 12:44:18,202 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: usando-api-terceiros                                  *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2019-03-23 12:46:41,401 [[usando-api-terceiros].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/listaCidades
+2019-03-23 12:46:41,404 [[usando-api-terceiros].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/listarCidades/]
+2019-03-23 12:46:41,708 [[usando-api-terceiros].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/favicon.ico
+2019-03-23 12:46:41,708 [[usando-api-terceiros].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/listarCidades/]
+2019-03-23 12:46:41,720 [[usando-api-terceiros].http.listener(2) SelectorRunner] WARN  org.mule.module.http.internal.listener.grizzly.ResponseStreamingCompletionHandler - HTTP response sending task failed with error: Broken pipe
+2019-03-23 12:47:05,487 [[usando-api-terceiros].HTTP_Listener_Configuration.worker.01] INFO  org.mule.api.processor.LoggerMessageProcessor - inicio fluxo lista de cidades
