@@ -1,0 +1,46 @@
+{
+    "inputMessageMetadata": {
+        "outboundProperties": {
+            "reference_number": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "first_name": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "department": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "name": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "job_title": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "last_name": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "employee_type": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "start_date": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            }
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Web_Service_Consumer",
+            "typeId": "accountInput"
+        }
+    },
+    "id": "2973165b-ee8d-4975-85d0-55743c2dc03b",
+    "version": "5.2.0.0"
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:sap="http://www.mulesoft.org/schema/mule/sap" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/sap http://www.mulesoft.org/schema/mule/sap/current/mule-sap.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <sap:connector name="SAP" validateConnections="true" doc:name="SAP" jcoAsHost="sap2.remoteides.com" jcoClient="800" jcoLang="en" jcoPasswd="welcome" jcoSysnr="29" jcoUser="ECC2936"/>
+    <flow name="acesso-sapFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/getProdutos" doc:name="HTTP"/>
+        <logger message="entrada fluxo acesso-SAP" level="INFO" doc:name="Logger"/>
+        <sap:outbound-endpoint connector-ref="SAP" outputXml="true" responseTimeout="10000" doc:name="SAP"/>
+    </flow>
+</mule>

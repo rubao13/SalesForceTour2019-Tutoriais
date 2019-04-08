@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:email="http://www.mulesoft.org/schema/mule/email"
+	xmlns:smtps="http://www.mulesoft.org/schema/mule/smtps" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:sfdc="http://www.mulesoft.org/schema/mule/sfdc" xmlns:twitter="http://www.mulesoft.org/schema/mule/twitter" xmlns:jms="http://www.mulesoft.org/schema/mule/jms" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:cxf="http://www.mulesoft.org/schema/mule/cxf" xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/cxf http://www.mulesoft.org/schema/mule/cxf/current/mule-cxf.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd
+http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
+http://www.mulesoft.org/schema/mule/sfdc http://www.mulesoft.org/schema/mule/sfdc/current/mule-sfdc.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/smtps http://www.mulesoft.org/schema/mule/smtps/current/mule-smtps.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd">
+    <db:template-query name="HRIS_Insert" doc:name="Template Query">
+        <db:dynamic-query><![CDATA[INSERT INTO employees
+           (first_name, last_name, department, job_title, start_date, employee_type)
+     VALUES
+           ( 
+             #[payload['first_name']]
+           , #[payload['last_name']]
+           , #[payload['department']]
+           , #[payload['job_title']]
+           , #[payload['start_date']]
+           , #[payload['employee_type']]]]></db:dynamic-query>
+    </db:template-query>
+    
+    <db:mysql-config name="HRIS_Datasource" host="localhost" port="3306" user="wordpress" password="F7AYUbrBGx" database="wordpress" doc:name="MySQL Configuration"/>
+ 
+    
+    <jms:activemq-connector name="Active_MQ" brokerURL="tcp://localhost:61616" validateConnections="true" doc:name="Active MQ"/>
+    <sfdc:config name="Salesforce" username="infra+sf@vertigo.com.br" password="Tict4c2018"  doc:name="Salesforce" securityToken="ujwRkDm6OnIOEARrx2RWajkM9"/>
+    <smtp:gmail-connector name="Gmail" contentType="text/plain" validateConnections="true" doc:name="Gmail"/>
+    <email:email-to-string-transformer mimeType="text/plain" name="Email_to_String" doc:name="Email to String"/>
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <ws:consumer-config name="Web_Service_Consumer" service="AccountsService" port="AccountsServiceSOAP" serviceAddress="http://localhost:8088/ServiceDesk/AccountsService" wsdlLocation="http://localhost:8088/ServiceDesk/AccountsService?wsdl" doc:name="Web Service Consumer"/>
+   
+   
+    <flow name="employee_onboarding">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="hr/onboarding" doc:name="HTTP"/>
+        <message-properties-transformer doc:name="Message Properties">
+            <add-message-property key="reference_number" value="#[Math.round(Math.random()*100000)]"/>
+            <add-message-property key="employee_type" value="#[payload['employee_type']]"/>
+            <add-message-property key="department" value="#[payload['department']]"/>
+            <add-message-property key="name" value="#[payload['first_name'] +  &quot; &quot; + payload['last_name']]"/>
+            <add-message-property key="first_name" value="#[payload['first_name']]"/>
+            <add-message-property key="last_name" value="#[payload['last_name']]"/>
+            <add-message-property key="start_date" value="#[payload['start_date']]"/>
+            <add-message-property key="job_title" value="#[payload['job_title']]"/>
+        </message-properties-transformer>
+        <db:insert config-ref="HRIS_Datasource" doc:name="HRIS Database">
+            <db:parameterized-query><![CDATA[INSERT INTO employees
+           (first_name, last_name, department, job_title, start_date, employee_type)
+     VALUES
+           ( 
+             #[payload["first_name"]]
+           , #[payload["last_name"]]
+           , #[payload["department"]]
+           , #[payload["job_title"]]
+           , #[payload["start_date"]]
+           , #[payload["employee_type"]])]]></db:parameterized-query>
+        </db:insert>
+        <tracking:custom-event event-name="Usuario criado no banco do RH" doc:name="Usuario criado no banco do RH">
+            <tracking:meta-data key="nome" value="#[message.outboundProperties.name]"/>
+        </tracking:custom-event>
+        <dw:transform-message doc:name="Transform Message" metadata:id="c06f46d1-d6fb-41c1-a4a2-2a2a666eda07">
+            <dw:input-payload doc:sample="sample_data\WebForm.dwl"/>
+            <dw:input-outbound-property propertyName="job_title"/>
+            <dw:input-outbound-property propertyName="reference_number"/>
+            <dw:input-outbound-property propertyName="first_name"/>
+            <dw:input-outbound-property propertyName="last_name"/>
+            <dw:input-outbound-property propertyName="employee_type"/>
+            <dw:input-outbound-property propertyName="department"/>
+            <dw:input-outbound-property propertyName="name"/>
+            <dw:input-outbound-property propertyName="start_date"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	department: outboundProperties.department,
+	employee_type: outboundProperties.employee_type,
+	first_name: outboundProperties.first_name,
+	job_title: outboundProperties.job_title,
+	last_name: outboundProperties.last_name,
+	start_date: outboundProperties.start_date
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <flow-ref name="Service_Orchestration" doc:name="Service_Orchestration"/>
+        <set-payload value="{ &quot;employeeName&quot;: &quot;#[message.outboundProperties['name']]&quot;, &quot;department&quot;:&quot;#[message.outboundProperties['department']]&quot;, &quot;referenceNumber&quot;: &quot;#[message.outboundProperties['reference_number']]&quot;}" doc:name="Create JSON"/>
+    </flow>
+    <flow name="Service_Orchestration" >
+        <enricher doc:name="Message Enricher" >
+            <flow-ref name="ServiceDesk_WebService_Client" doc:name="ServiceDesk_WebService_Client"/>
+            <enrich source="#[payload.email]" target="#[message.outboundProperties.email]"/>
+            <enrich source="#[payload.accountname]" target="#[message.outboundProperties.username]"/>
+        </enricher>
+        <tracking:custom-event event-name="Usuario criado no HelpDesk" doc:name="Usuario criado no HelpDesk">
+            <tracking:meta-data key="username" value="#[message.outboundProperties.username]"/>
+            <tracking:meta-data key="reference_number" value="#[message.inboundProperties.reference_number]"/>
+            <tracking:meta-data key="email" value="#[message.outboundProperties.email]"/>
+        </tracking:custom-event>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+        <choice doc:name="Choice">
+            <when expression="#[payload.get(&quot;employee_type&quot;).equals(&quot;Remote&quot;)]">
+                <jms:outbound-endpoint queue="MobileEquipmentQueue" connector-ref="Active_MQ" doc:name="Mobile Equipment Queue"/>
+                <tracking:custom-event event-name="Smartphone Reservado" doc:name="Smartphone Reservado"/>
+            </when>
+            <otherwise>
+                <jms:outbound-endpoint queue="DeskAllocationQueue" connector-ref="Active_MQ" doc:name="Desk Allocation Queue"/>
+                <tracking:custom-event event-name="Desktop Reservado" doc:name="Desktop Reservado"/>
+            </otherwise>
+        </choice>
+        <choice doc:name="Choice">
+            <when expression="#[message.outboundProperties.department == &quot;Sales&quot; || message.outboundProperties.department == &quot;Support&quot;]">
+                <dw:transform-message metadata:id="40fd8442-b6de-4d3d-b533-1ccc404b7ea4" doc:name="Transform Message">
+                    <dw:input-payload/>
+                    <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+%namespace ns0 http://www.example.org/HREmployeeOnboarding/
+---
+{
+	Email : outboundProperties.email,
+	Username : outboundProperties.username,
+	Alias : outboundProperties.username,
+	TimeZoneSidKey : "America/Sao_Paulo",
+	CompanyName : "VertigoTecnologia",
+	EmailEncodingKey : "UTF-8",
+	LanguageLocaleKey : "en_US",
+	LocaleSidKey : "en_US",
+	ProfileId : "00e360000016OMI",
+	Department : payload.department,
+	Title : payload.job_title,
+	LastName : payload.last_name,
+	FirstName : payload.first_name
+}]]></dw:set-payload>
+                </dw:transform-message>
+                <set-variable variableName="nomeFunc" value="#[payload.first_name]" doc:name="Variable"/>
+                <expression-component doc:name="Expression"><![CDATA[payload.Alias = payload.Alias.substring(0,5);]]></expression-component>
+                <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+                <sfdc:create-single config-ref="Salesforce" type="User" doc:name="Create Salesforce User"/>
+                <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+                <tracking:custom-event event-name="Conta criada no Salesforce" doc:name="Conta criada no Salesforce">
+                    <tracking:meta-data key="ID" value="#[payload.id]"/>
+                </tracking:custom-event>
+            </when>
+            <otherwise>
+                <logger message="No Salesforce account needed for #[message.inboundProperties.department] employees" level="INFO" doc:name="No Salesforce Required"/>
+            </otherwise>
+        </choice>
+
+        <set-payload value="Welcome to Mule Workshop #[payload.get(&quot;first_name&quot;)] !" doc:name="Prepare Welcome Message"/>
+        <smtp:outbound-endpoint host="smtp.gmail.com" port="587" user="vtgmuleworkshop%40gmail.com" password="vtg123work" connector-ref="Gmail" to="rubens@vertigo.com.br" from="vtgmuleworkshop@gmail.com" subject="Seja Bem Vindo" responseTimeout="10000" doc:name="SMTP" />
+        <tracking:custom-event event-name="Email Enviado" doc:name="Email Enviado">
+            <tracking:meta-data key="destinatario" value="#[message.inboundProperties.name]"/>
+        </tracking:custom-event>
+    </flow>
+    <sub-flow name="ServiceDesk_WebService_Client" >
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 http://www.mulesoft.com/AccountsService/
+---
+{
+	ns0#accountInput: {
+		firstname: payload.first_name,
+		lastname: payload.last_name,
+		role: payload.employee_type,
+		domain: "workshop.com"
+	}
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <ws:consumer config-ref="Web_Service_Consumer" operation="createAccount" doc:name="Web Service Consumer"/>
+
+        <dw:transform-message metadata:id="b2244000-5de3-42b8-9c15-174ee89aeb1b" doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+%namespace ns0 http://www.mulesoft.com/AccountsService/
+---
+{
+	email: payload.ns0#accountOutput.email,
+	accountname: payload.ns0#accountOutput.accountname
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <logger level="INFO" doc:name="Logger"/>
+
+    </sub-flow>
+</mule>

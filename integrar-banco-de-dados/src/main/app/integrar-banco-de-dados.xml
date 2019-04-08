@@ -14,7 +14,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
         <http:listener config-ref="HTTP_Listener_Configuration" path="/listarfuncionarios" doc:name="HTTP"/>
         <logger message="inicio do fluxo integrar banco de dados" level="INFO" doc:name="Logger"/>
         <db:select config-ref="MySQL_Configuration" doc:name="Database">
-            <db:parameterized-query><![CDATA[select employee_id as id, last_name as Sobrenome, department as depto, job_title as cargo, start_date as admissao from employees order by employee_id desc]]></db:parameterized-query>
+            <db:parameterized-query/>
         </db:select>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
     </flow>

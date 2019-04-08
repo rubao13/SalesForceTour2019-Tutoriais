@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Map_to_Pojo",
+            "typeId": "Employee"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "XML_to_Salesforce",
+            "typeId": "User"
+        }
+    },
+    "id": "40fd8442-b6de-4d3d-b533-1ccc404b7ea4",
+    "version": "5.2.0.0"
+}

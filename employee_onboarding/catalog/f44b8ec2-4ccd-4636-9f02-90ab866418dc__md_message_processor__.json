@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "XML_To_User",
+            "typeId": "employee"
+        }
+    },
+    "id": "f44b8ec2-4ccd-4636-9f02-90ab866418dc",
+    "version": "5.2.0.0"
+}

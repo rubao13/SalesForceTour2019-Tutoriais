@@ -1,0 +1,13 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "outboundProperties": {
+            "employee": {
+                "connectorName": "Map_to_Pojo",
+                "typeId": "Employee"
+            }
+        }
+    },
+    "id": "b007eb8a-0152-440c-8179-777772348da7",
+    "version": "5.2.0.0"
+}

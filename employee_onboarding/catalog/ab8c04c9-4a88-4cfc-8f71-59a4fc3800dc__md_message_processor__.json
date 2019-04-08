@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "XML_to_Salesforce",
+            "typeId": "User"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Map_to_Pojo",
+            "typeId": "com.mulesoft.workshop.servicedesk.AccountInput"
+        }
+    },
+    "id": "ab8c04c9-4a88-4cfc-8f71-59a4fc3800dc",
+    "version": "5.2.0.0"
+}

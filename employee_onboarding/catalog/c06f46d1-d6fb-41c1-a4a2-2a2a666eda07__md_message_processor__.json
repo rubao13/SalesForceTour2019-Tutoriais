@@ -1,0 +1,50 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Integer_To_Map",
+            "typeId": "__default__"
+        },
+        "outboundProperties": {
+            "reference_number": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "first_name": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "department": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "job_title": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "name": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "last_name": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "employee_type": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            },
+            "start_date": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "String"
+            }
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Map_to_Pojo",
+            "typeId": "Employee"
+        }
+    },
+    "id": "c06f46d1-d6fb-41c1-a4a2-2a2a666eda07",
+    "version": "5.2.0.0"
+}

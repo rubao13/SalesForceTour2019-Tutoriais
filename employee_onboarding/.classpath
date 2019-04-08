@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/resources"/>
+	<classpathentry kind="src" path="src/main/api"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.28-bin.jar"/>
+	<classpathentry kind="lib" path="lib/activemq-all-5.8.0.jar"/>
+	<classpathentry kind="con" path="MULE_LIB/Salesforce/org.mule.tooling.ui.contribution.sfdc.3.5.0"/>
+	<classpathentry kind="src" path="src/main/app"/>
+	<classpathentry kind="con" path="MULE_LIB/APIkit/org.mule.tooling.apikit"/>
+	<classpathentry kind="con" path="MULE_RUNTIME/org.mule.tooling.server.3.8.4.ee"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="MULE_LIB/SAP/org.mule.tooling.ui.contribution.sap.3.5.0"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

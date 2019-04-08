@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Map_to_Pojo",
+            "typeId": "Employee"
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "ebce3795-b8c3-4ef0-a665-f0d9a9a15402",
+    "version": "5.2.0.0"
+}
